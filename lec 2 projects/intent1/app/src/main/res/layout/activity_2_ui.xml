@@ -4,28 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Activity2Code">
 
     <Button
-        android:id="@+id/button_moveToSecondPage"
+        android:id="@+id/button_moveToHomePage"
+        android:onClick="func_moveToHomePage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="320dp"
-        android:onClick="func_moveToSecondPage"
-        android:text="Move to second page"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="280dp"
+        android:text="move to home page"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="204dp"
-        android:text="Home page"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="184dp"
+        android:text="Second Page"
         android:textSize="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
