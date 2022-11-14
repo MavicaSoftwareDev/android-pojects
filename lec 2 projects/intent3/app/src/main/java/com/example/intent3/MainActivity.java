@@ -33,14 +33,18 @@ String passwordText="password : ";
     }
 
     public void func_moveToRegister(View view){
-
+    startActivityForResult(registerIntent,REGISTER_REQUEST_CODE);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == LOGIN_REQUEST_CODE ){
-            Toast.makeText(this,"From Login Page",Toast.LENGTH_SHORT);
+            Toast.makeText(this,"From Login Page",Toast.LENGTH_LONG).show();
+            userName.setText("user name : "+data.getStringExtra("username"));
+            password.setText("password : "+data.getStringExtra("password"));
+        }else{
+            Toast.makeText(this,data.getData().toString(),Toast.LENGTH_LONG).show();
             userName.setText("user name : "+data.getStringExtra("username"));
             password.setText("password : "+data.getStringExtra("password"));
         }
