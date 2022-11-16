@@ -36,10 +36,21 @@
         android:id="@+id/button_sendToHomePage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="268dp"
         android:onClick="func_sendToHomePage"
-        android:layout_marginTop="260dp"
         android:text="send"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="268dp"
+        android:text="Cancel"
+        android:onClick="cancel"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

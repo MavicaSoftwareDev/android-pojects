@@ -22,7 +22,15 @@ EditText password;
         Intent intent = new Intent();
         intent.putExtra("username",userName.getText().toString());
         intent.putExtra("password",password.getText().toString());
-        setResult(MainActivity.LOGIN_REQUEST_CODE,intent);
+        setResult(RESULT_OK,intent);
+        finish();
+    }
+
+    public  void cancel(View view){
+        Intent intent = new Intent();
+        intent.putExtra("username","");
+        intent.putExtra("password","");
+        setResult(RESULT_CANCELED,intent);
         finish();
     }
 }

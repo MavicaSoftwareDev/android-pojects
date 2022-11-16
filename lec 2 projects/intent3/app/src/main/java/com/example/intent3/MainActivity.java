@@ -39,12 +39,12 @@ String passwordText="password : ";
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == LOGIN_REQUEST_CODE ){
-            Toast.makeText(this,"From Login Page",Toast.LENGTH_LONG).show();
+        if(resultCode == RESULT_OK ){
+            Toast.makeText(this,"Result Ok",Toast.LENGTH_LONG).show();
             userName.setText("user name : "+data.getStringExtra("username"));
             password.setText("password : "+data.getStringExtra("password"));
-        }else{
-            Toast.makeText(this,data.getData().toString(),Toast.LENGTH_LONG).show();
+        }else if(resultCode == RESULT_CANCELED){
+            Toast.makeText(this,"Canceld",Toast.LENGTH_LONG).show();
             userName.setText("user name : "+data.getStringExtra("username"));
             password.setText("password : "+data.getStringExtra("password"));
         }

@@ -21,8 +21,8 @@ EditText editText_password;
 
     public void sendBackToHomeFromRegister(View view){
         Intent intent = new Intent();
-        intent.setData(Uri.parse(editText_username.getText().toString()));
-        intent.setData(Uri.parse(editText_password.getText().toString()));
+//        intent.setData(Uri.parse(editText_username.getText().toString()));
+//        intent.setData(Uri.parse(editText_password.getText().toString()));
         intent.putExtra("username",editText_username.getText().toString());
         intent.putExtra("password",editText_password.getText().toString());
         setResult(RESULT_OK,intent);
